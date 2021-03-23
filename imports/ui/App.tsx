@@ -1,9 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import Login from './components/Login/Login';
+import Main from './components/Main/Main';
+import theme from './theme/NormalTheme';
 
-const App = (porps:any):JSX.Element => (
-  <div>
-    <h1>Welcome to Meteor!</h1>
-  </div>
-);
+const App = (porps: any): JSX.Element => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/chats" component={Main} />
+        </Switch>
+      </Router>
+    </ThemeProvider>
+  );
+};
 
 export default App;
