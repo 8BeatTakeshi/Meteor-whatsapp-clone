@@ -3,6 +3,22 @@ import React from 'react';
 import StyledFormLogin from './StyledFormLogin';
 
 const FormLogin = (props: any): JSX.Element => {
+  const [state, setState] = React.useState<any>({
+    username: '',
+    phone: '',
+    password: '',
+  });
+  const { username, phone, password } = state;
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const inputValue: string = e.target.value;
+    const inputName: string = e.target.name;
+    setState((prevState) => ({
+      ...prevState,
+      [inputName]: inputValue,
+    }));
+  };
+
   return (
     <StyledFormLogin>
       <label className="label">
@@ -11,6 +27,8 @@ const FormLogin = (props: any): JSX.Element => {
           className="input"
           name="username"
           placeholder="Nom d'utilisateur"
+          value={username}
+          onChange={handleChange}
         />
       </label>
 
@@ -20,6 +38,8 @@ const FormLogin = (props: any): JSX.Element => {
           className="input"
           name="phone"
           placeholder="Numéro de téléphone"
+          value={phone}
+          onChange={handleChange}
         />
       </label>
 
@@ -29,6 +49,8 @@ const FormLogin = (props: any): JSX.Element => {
           className="input"
           name="password"
           placeholder="Mot de passe"
+          value={password}
+          onChange={handleChange}
         />
       </label>
 
