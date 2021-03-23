@@ -10,9 +10,9 @@ Meteor.startup(() => {
 
   // Create fake users
   if (numberOfUsers === 0) {
-    console.log("Il n'y a pas d'utilisateurs");
+    console.log('There are no users');
     createDummyUsers(dummyUsers);
   } else {
-    console.log(`Il y a ${numberOfUsers} utilisateurs`);
+    console.log(`There are ${numberOfUsers} users`);
   }
 });
