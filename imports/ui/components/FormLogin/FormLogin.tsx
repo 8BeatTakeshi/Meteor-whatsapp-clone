@@ -54,7 +54,9 @@ const FormLogin = (props: any): JSX.Element => {
         />
       </label>
 
-      <button className="loginBtn">CONNEXION</button>
+      <button onClick={() => props.onLogin(state)} className="loginBtn">
+        CONNEXION
+      </button>
     </StyledFormLogin>
   );
 };

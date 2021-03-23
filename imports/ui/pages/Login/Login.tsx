@@ -5,10 +5,11 @@ import FormLogin from '../../components/FormLogin/FormLogin';
 
 const Login = (props: any): JSX.Element => {
   const messageText: string = 'Connectez vous afin de lancer une conversation';
+  const handleLogin = (state: any): void => {};
 
   return (
     <RighImg messageText={messageText}>
-      <FormLogin />
+      <FormLogin onLogin={handleLogin} />
     </RighImg>
   );
 };
