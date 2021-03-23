@@ -1,11 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-const Login = (props:any):JSX.Element => {
+import RighImg from '../../components/RightImg/RightImg';
+import FormLogin from '../../components/FormLogin/FormLogin';
+
+const Login = (props: any): JSX.Element => {
+  const messageText: string = 'Connectez vous afin de lancer une conversation';
+
   return (
-    <div>
-      <div>Je suis le componsant Login</div>
-    </div>
-  )
-}
+    <RighImg messageText={messageText}>
+      <FormLogin />
+    </RighImg>
+  );
+};
 
-export default Login
+export default Login;

@@ -14,6 +14,7 @@ const RightImg = (props: any): JSX.Element => {
         <p className="rightImg_text">{props.messageText}</p>
         <div className="rightImg_divider" />
       </div>
+      {props.children}
     </StyledRightImg>
   );
 };
