@@ -1,4 +1,4 @@
-import { User } from './model';
+import { User } from './models';
 import { Accounts } from 'meteor/accounts-base';
 
 export const createDummyUsers = (users: User[]): void => {

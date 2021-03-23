@@ -1,7 +1,7 @@
 export interface Profile {
   phone?: string;
   picture?: string;
-  status?: string;
+  actu?: string;
 }
 
 export interface User {
